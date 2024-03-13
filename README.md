@@ -1,7 +1,7 @@
 ﻿# UDP -  VR HMD Benchmarking Notes
 
 ## Observed Issues
-Byte buffers being sent from the Arduino SparkFun ESP32 ThingPlus boards were experiencing delays and latency issues when received by the VR HMDs used in the Viajero experiments. 
+Byte buffers being sent from the Arduino SparkFun ESP32 ThingPlus (setup tutorial here: https://learn.sparkfun.com/tutorials/esp32-thing-plus-hookup-guide/all) boards were experiencing delays and latency issues when received by the VR HMDs used in the Viajero experiments. 
 
 These packets are sent every 10ms and are used to send current vehicle speed and rotational data via an Arduino (code here on UDP Broadcasting Branch: https://github.com/mark-mcg/Viajero_Arduino) to the VR HMD, which the Unity-built application (https://github.com/mark-mcg/Passenger-VR-AR-In-Car--internal- Branch - UDP Broadcasting) then uses this data to move the user through the Virtual Environment in a matching manner, to reduce the motion sickness caused by mismatched movement between real world and VE. 
 
